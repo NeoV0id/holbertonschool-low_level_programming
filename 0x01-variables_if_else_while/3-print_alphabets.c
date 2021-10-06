@@ -3,9 +3,6 @@
 /**
  * main - this function will print out the alphabet
  *
- * putchar - will display the alphabet (replace printf)
- * @char: is the string of alphabet
- *
  * Return: will return 0
  */
 
