@@ -1,0 +1,16 @@
+#include "main.h"
+
+int main(void)
+{
+	char a[8] = "_putchar";
+	int i;
+	char b = a[i];
+	for
+		(i = 0;
+		 i < 8;
+		 i ++)
+	{
+		_putchar(b);
+	}
+	return (0);
+}
