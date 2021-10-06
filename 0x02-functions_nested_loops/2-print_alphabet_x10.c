@@ -20,8 +20,11 @@ void print_alphabet_x10(void)
 			a <= 'z';
 			a++)
 		{
+
 		_putchar(a);
+
 		}
+
 	       _putchar('\n');
 	}
 }
