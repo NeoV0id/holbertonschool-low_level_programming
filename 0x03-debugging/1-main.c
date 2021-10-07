@@ -17,10 +17,7 @@ int main(void)
         {
                 putchar(i);
         }
-/**
- * The i doesn't increment, so it is always smaller than 10, therefore it will
- * continue printing i forever.
- */
+/* The i doesn't increment */
         printf("Infinite loop avoided! \\o/\n");
 
         return (0);
