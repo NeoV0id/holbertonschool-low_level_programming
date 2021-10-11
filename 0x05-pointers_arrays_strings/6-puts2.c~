@@ -1,0 +1,17 @@
+#include "main.h"
+
+/**
+ * puts2 - prints a string to stdout
+ * @str: the string to print
+ */
+
+void puts2(char *str)
+{
+	int i;
+
+	for (i = 0; i < _strlen(*str); i++)
+	{
+		_putchar(str[i + 1]);
+	}
+	_putchar('\n');
+}

@@ -1,0 +1,19 @@
+#include "main.h"
+
+/**
+ * puts_half - prints out half of a string
+ * @str: string to split
+ */
+
+void puts_half(char *str)
+{
+	int i;
+	int n;
+
+	*str = n;
+
+	for (i = 0; i < (n / 2); i++)
+	{
+		_putchar(str[i]);
+	}
+}
