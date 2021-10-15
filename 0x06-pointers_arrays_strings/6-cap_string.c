@@ -17,7 +17,7 @@ char *cap_string(char *str)
 	{
 		if (str[i] == 0)
 		{
-			if (str[i] >= 61 && str[i] <= 122)
+			if (str[i] >= 97 && str[i] <= 122)
 			{
 				str[i] = str[i] - 32;
 			}
@@ -29,13 +29,22 @@ char *cap_string(char *str)
 		{
 			++i;
 
-			if (str[i] >= 61 && str[i] <= 122)
+			if (str[i] >= 97 && str[i] <= 122)
 			{
 				str[i] = str[i] - 32;
 			}
-			else
+			else if (str[i] == s[0] || str[i] == s[1] ||
+				 str[i] == s[2] || str[i] == s[3] ||
+				 str[i] == s[4] || str[i] == s[5] ||
+				 str[i] == s[6] || str[i] == s[7] ||
+				 str[i] == s[8] || str[i] == s[9] ||
+				 str[i] == s[10] || str[i] == s[11])
 			{
 				++i;
+				if (str[i] >= 97 && str[i] <= 122)
+				{
+					str[i] = str[i] - 32;
+				}
 			}
 		}
 	}
