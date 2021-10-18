@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * _strchr - returns the pointer of the first occurrence of char c
+ * _strpbrk - returns the pointer of the first occurrence of string accept
  * @s: string to search
  * @accept: string to find
  *
