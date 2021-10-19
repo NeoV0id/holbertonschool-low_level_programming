@@ -14,23 +14,25 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int j;
 	unsigned int n;
 
-	i = 0;
-	j = 0;
+	n = 0;
 
-	while ((s[i] != '\0') && (s[i] != '\0'))
+	for (i = 0; accept[i] != '\0'; i++)
 	{
-		while (accept[j] != '\0')
+		j = 0;
+
+		while (s[j] != '\0' && s[j] != ' ')
 		{
-			if (accept[j] == s[i])
+			if (accept[i] == s[j])
 			{
 				n++;
+				j++;
 			}
 
-			j++;
-			continue;
+			else if (accept[i] != s[j])
+			{
+				j++;
+			}
 		}
-
-		++i;
 	}
 
 	return (n);
