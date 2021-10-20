@@ -6,3 +6,4 @@ This is the README file for C learning in holberton, -holbertonschool-low_level_
 - Fifth directory -0x04-more_functions_nested_loops- is the continuation of the third project
 - Sixth directory -0x05 is about pointers and array
 - Seventh directory -0x06-pointers_arrays_strings- is once again, about pointers and array
+- Eight-th directory -0x07-pointers_arrays_strings- is still about pointers
