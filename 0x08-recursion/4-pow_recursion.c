@@ -17,12 +17,12 @@ int _pow_recursion(int x, int y)
 		return (1);
 	}
 
-	else if (x < 0)
+	else if (y < 0)
 	{
 		return (-1);
 	}
 
-	n = _pow_recursion(x, y/2);
+	n = _pow_recursion(x, y / 2);
 
 	if (y % 2 == 0)
 	{
