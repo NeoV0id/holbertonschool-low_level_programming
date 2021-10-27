@@ -10,17 +10,6 @@
 
 char *_strdup(char *str)
 {
-	#include "holberton.h"
-#include <stdio.h>
-#include <stdlib.h>
-
-/**
- * _strdup - returns a pointer to a newly allocated space in memory.
- * @str: char
- * Return: pointer to the duplicated string or NULL.
- */
-char *_strdup(char *str)
-{
 	unsigned int i;
 	unsigned int j;
 	char *cpy;
@@ -29,6 +18,7 @@ char *_strdup(char *str)
 	{
 		return (0);
 	}
+
 	j = 0;
 	while (str[j] != '\0')
 	{
@@ -50,6 +40,6 @@ char *_strdup(char *str)
 			i++;
 		}
 		cpy[i] = '\0';
-		return (s);
+		return (cpy);
 	}
 }
