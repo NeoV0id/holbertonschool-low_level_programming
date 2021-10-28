@@ -2,7 +2,7 @@
 
 /**
  * malloc_checked - should cause normal process termination with a status value
- * @b:
+ * @b: size of place to allocate
  *
  * Return: a pointer to the allocated memory
  */
@@ -10,16 +10,20 @@
 void *malloc_checked(unsigned int b)
 {
 	int *check;
-	int failure = 98;
-	int *fail = &failure;
+	int failure;
+	int *fail;
+
+	failure = 98;
+	fail = &failure;
+
 	check = malloc(b);
 
-	if (b == 0)
+	if (check == NULL)
 	{
-		return (0);
+		return (fail);
 	}
 
-	else if (check == 0)
+	else if (b == 0)
 	{
 		return (fail);
 	}
