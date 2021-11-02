@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	char prog[] =__FILE__;
+	char prog[] = __FILE__;
 
 	printf("%s\n", prog);
 
