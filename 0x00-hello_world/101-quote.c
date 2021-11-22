@@ -13,6 +13,12 @@ int my_putchar(char c)
 	return (write(1, &c, 1));
 }
 
+/**
+ * main - execute code to print quote
+ *
+ * Return: 1
+ */
+
 int main(void)
 {
 	char *quote = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
