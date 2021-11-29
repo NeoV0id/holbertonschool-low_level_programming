@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+/**
+ * main - prints all possible different combinations of three digits.
+ *
+ * Return: 0 for success
+ */
+
+int main(void)
+{
+	int i, j, l;
+
+	for (i = 48; i <= 57; i++)
+	{
+		for (j = 49; j <= 57; j++)
+		{
+			for (l = 50; l <= 57; l++)
+			{
+				if (l > j && j > i)
+				{
+					putchar(i);
+					putchar(j);
+					putchar(l);
+					if (i < 55)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
+}
