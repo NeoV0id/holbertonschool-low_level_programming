@@ -23,14 +23,15 @@ void print_times_table(int n)
 			printf("%d", j * i);
 			if (j < n)
 			{
-				if ((j * i) < 10)
-					printf(",   ");
+				if ((j * i) > 100 || (i * j + 1) >= 100)
+					printf(", ");
 				else if ((j * i) < 100 && (i * j) > 10)
 					printf(",  ");
+				else if ((j * i) < 10)
+					printf(",   ");
 				else if ((i * j + 1) >= 10)
 					printf(",  ");
-				else if ((j * i) > 100 || (i * j + 1) >= 100)
-					printf(", ");
+
 			}
 		}
 	printf("\n");
