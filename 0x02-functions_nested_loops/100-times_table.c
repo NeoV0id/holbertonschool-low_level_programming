@@ -22,7 +22,14 @@ void print_times_table(int n)
 		{
 			printf("%d", j * i);
 			if (j < n)
-				printf(",   ");
+			{
+				if ((j * i) < 10)
+					printf(",   ");
+				else if ((j * i) < 100 && (j * i) > 10)
+					printf(",  ");
+				else if ((j * i) > 100)
+					printf(", ");
+			}
 		}
 	printf("\n");
 	i++;
