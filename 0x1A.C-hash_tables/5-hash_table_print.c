@@ -7,9 +7,21 @@
 
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int index;
-	
-	while(ht->array[index]->next != NULL)
+	if(ht == NULL)
+		return;
+
+	printf("{");
+
+	while(ht->array[index] != NULL)
 	{
-		printf("'{:s}':'{:s}'", 
+		printf("'{:s}':'{:s}'", ht->array[index]->key, ht->array[index]->value);
+
+		if(ht->array[index]->next != NULL)
+		{
+			printf("}");
+			break;
+		}
+		
+		ht->array[index] = ht->array[index]->next;
+	}
 }
