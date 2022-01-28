@@ -1,4 +1,8 @@
 #include "main.h"
+#include <stddef.h>
+#include <stdlib.h>
+
+#include <unistd.h>
 
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -12,12 +16,13 @@
  * Return: the actual number of letters it could read and print
  */
 
-ssize_t read_textfile(const char *filename, size_t letters)
+size_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	int i;
+	char *buf;
 
-	fd = open(filename, O_RDONLY);
+	buf = malloc(sizeof(char) * letters);
+	fd = open(filename, O_RDWR);
 
 	if (filename == NULL)
 		return (0);
@@ -25,8 +30,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	else if (fd == -1)
 		return (0);
 
-	for (i = 0; i != '\0'; i++)
-	{
-		
-	}
+	read(fd, buf, letters);
+	write(fd, buf, letters);
+
+	return (letters);
 }

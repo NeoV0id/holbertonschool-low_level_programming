@@ -10,22 +10,17 @@
 void *malloc_checked(unsigned int b)
 {
 	int *check;
-	int failure;
-	int *fail;
-
-	failure = 98;
-	fail = &failure;
 
 	check = malloc(b);
 
-	if (check == NULL)
+	if (check == 0)
 	{
-		return (fail);
+		exit(98);
 	}
 
 	else if (b == 0)
 	{
-		return (fail);
+		exit(98);
 	}
 
 	return (check);
