@@ -1,18 +1,17 @@
-CC= gcc
-SRC= *.c
-OBJ= *.o
-NAME= school
-RM= rm -f
+CC = gcc
+SRC = *.c
+OBJ = *.o
+NAME = school
+RM = rm -f
 
 all: $(OBJ)
     $(CC) $(OBJ) -o $(NAME)
 
-fclean:
-    clean:
-        $(RM) $(NAME) *.swp *.swo *.swa \".\#\*"
+clean: 
+    $(RM) $(NAME) *.swp *.swo *.swa *~
 
-    oclean:
-        $(RM) $(OBJ)
+oclean:
+    $(RM) $(OBJ)
 
-re:
-    oclean all
+fclean: clean oclean
+re: oclean all
