@@ -3,9 +3,8 @@ SRC= *.c
 OBJ= *.o
 NAME= school
 
-all:
-    $(NAME): $(OBJ)
-        $(CC) $(OBJ) -o $(NAME)
+all: $(OBJ)
+    $(CC) $(OBJ) -o $(NAME)
 
-    $(OBJ): $(SRC)
+    $(SRC)
         $(CC) -c $(SRC)
