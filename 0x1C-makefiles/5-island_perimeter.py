@@ -23,17 +23,13 @@ def island_perimeter(grid):
         if i != 0:
             if i + 1 == len(island):
                 perimeter += 3
-                print("c")
             elif i + 1 != len(island):
                 perimeter += 2
-                print("b")
         elif i == 0:
             if i != len(island):
                 perimeter += 3
-                print("a.a")
             elif i == len(island):
                 perimeter += 4
-                print("a.b")
 
     return perimeter
 
