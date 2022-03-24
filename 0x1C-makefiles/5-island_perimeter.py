@@ -1,19 +1,19 @@
 #!/usr/bin/python3
-""" 
+"""
 Module for task 5
 """
 
 
 def island_perimeter(grid):
-    """ island_perimeter: will compute the perimeter of the island on grid 
+    """
+        island_perimeter: will compute the perimeter of the island on grid
         args:
             grid: grid to check
     """
-    re_water = lambda grid, water : grid.remove(water)
     perimeter = 0
     island = []
     for i in grid:
-        for j in i: 
+        for j in i:
             if j == 0:
                 pass
             elif j == 1:
@@ -31,4 +31,3 @@ def island_perimeter(grid):
                 perimeter += 4
 
     return perimeter
-
