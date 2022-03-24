@@ -18,7 +18,6 @@ def island_perimeter(grid):
                 pass
             elif j == 1:
                 island.append(j)
-    print(island)
     for i in range(0, len(island)):
         if i != 0:
             if i + 1 == len(island):
